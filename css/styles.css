@@ -10,3 +10,8 @@ body {
   background: #C7EFCF;
   width: 400px;
 }
+
+span {
+  background: #EEF5DB;
+  display: block;
+}

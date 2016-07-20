@@ -20,6 +20,7 @@ body {
 }
 
 .row {
+  display: -webkit-flex;
   display: flex;
 }
 
@@ -56,5 +57,7 @@ span:last-child {
 
 .screen {
   /* Set a large number to ensure element takes up remaining space */
-  flex-grow: 100;
+  -ms-flex: 100;
+  -webkit-flex: 100;
+  flex: 100;
 }

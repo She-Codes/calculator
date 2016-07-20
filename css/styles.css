@@ -4,14 +4,57 @@
 
 body {
   font-family: Arial, sans-serif;
+  font-size: 2rem;
 }
 
+/*.grid:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+*/
 .calculator {
   background: #C7EFCF;
-  width: 400px;
+  padding: 20px;
+  position: absolute;
 }
+
+.row {
+  display: flex;
+}
+
+/* Couldn't use display: table-cell for span
+elements because would not be able to use margin.
+Setting span properties with ems allows the size to be
+scalable by changing the font size on the body */
 
 span {
   background: #EEF5DB;
-  display: block;
+  text-align: center;
+  width: 2.5em;
+  height: 1.5em;
+  line-height: 1.5em;
+  margin: 0 .3em .3em 0;
+  color: #333745;
+}
+
+span:last-child {
+  margin-right: 0;
+}
+
+.row:last-child span {
+  margin-bottom: 0;
+}
+
+.c {
+  background: #E63462;
+}
+
+.equal {
+  background: #FE5F55;
+}
+
+.screen {
+  /* Set a large number to ensure element takes up remaining space */
+  flex-grow: 100;
 }

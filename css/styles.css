@@ -19,7 +19,7 @@ body {
   box-shadow: 0 4px #A9D8C0;
 }
 
-.calculator, span {
+.calculator, span, .screen {
   border-radius: 3px;
 }
 
@@ -37,14 +37,17 @@ span {
   background: #EEF5DB;
   text-align: center;
   width: 2.5em;
-  height: 1.5em;
-  line-height: 1.5em;
   margin: 0 .3em .3em 0;
   color: #333745;
 }
 
 span:last-child {
   margin-right: 0;
+}
+
+span, .screen {
+  height: 1.5em;
+  line-height: 1.5em;
 }
 
 .row:last-child span {
@@ -62,9 +65,16 @@ span:last-child {
   top: 4px;
 }
 
-.c {
+.clear {
+  -ms-flex: 100;
+  -webkit-flex: 100;
+  flex: 100;
   background: #E63462;
-  box-shadow: 0 4px #962643;
+  box-shadow: 0 4px #962643;}
+
+.op, .del {
+  background: #A4B1DE;
+  box-shadow: 0 4px #717a9a;
 }
 
 .equal {
@@ -72,18 +82,19 @@ span:last-child {
   box-shadow: 0 4px #AF423B;
 }
 
-.op {
-  background: #A4B1DE;
-  box-shadow: 0 4px #717a9a;
-}
-
 .screen {
   /* Set a large number to ensure element takes up remaining space */
-  -ms-flex: 100;
-  -webkit-flex: 100;
-  flex: 100;
   box-shadow: inset 0 4px rgba(0, 0, 0, 0.28);
   background: rgba(0, 0, 0, 0.28);
+  font-size: 2rem;
+  margin-bottom: .3em;
+  padding: .2em;
+  border: none;
+  outline: none;
+  width: 10.9em; /* (button width * 3) + (button margin-right * 3) */
+  overflow: hidden;
+  color: #FFF;
+  text-align: right;
 }
 
 

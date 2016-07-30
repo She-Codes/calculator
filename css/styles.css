@@ -4,8 +4,11 @@
 
 body {
   font-family: Arial, sans-serif;
-  font-size: 2rem;
   background: #FEFFFB;
+}
+
+body, .screen {
+  font-size: 2rem;
 }
 
 .calculator {
@@ -86,7 +89,6 @@ span, .screen {
   /* Set a large number to ensure element takes up remaining space */
   box-shadow: inset 0 4px rgba(0, 0, 0, 0.28);
   background: rgba(0, 0, 0, 0.28);
-  font-size: 2rem;
   margin-bottom: .3em;
   padding: .2em;
   border: none;
